@@ -3,6 +3,14 @@ GET http://localhost:3000/songs
 
 ### create a new song
 POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+  "releaseDate": "2024-09-09",
+  "title": "Happy Birthday",
+  "artists": ["Owais"],
+  "duration": "10:15"
+}
 
 ### delete a song
 DELETE http://localhost:3000/songs/1
