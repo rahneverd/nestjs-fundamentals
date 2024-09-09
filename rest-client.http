@@ -1,0 +1,12 @@
+### get all songs
+GET http://localhost:3000/songs
+
+### create a new song
+POST http://localhost:3000/songs
+
+### delete a song
+DELETE http://localhost:3000/songs/1
+
+### update a song
+PUT http://localhost:3000/songs/1
+

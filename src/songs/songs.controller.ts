@@ -6,7 +6,7 @@ export class SongsController {
   constructor(private songsService: SongsService) {}
   @Get()
   findAll() {
-    return 'fetch all songs';
+    return this.songsService.findAll();
   }
 
   @Get(':id')
@@ -16,7 +16,7 @@ export class SongsController {
 
   @Post()
   create() {
-    return 'create a song';
+    return this.songsService.create('new song');
   }
 
   @Put(':id')
