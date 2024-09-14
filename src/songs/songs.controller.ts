@@ -20,7 +20,7 @@ export class SongsController {
   }
 
   @Get(':id')
-  findOneById(@Param('id') id: number) {
+  findOneById(@Param('id', new ParseIntPipe()) id: number) {
     return 'find one by id: ' + id;
   }
 
