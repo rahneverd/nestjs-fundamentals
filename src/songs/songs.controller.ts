@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpStatus,
   Param,
   ParseIntPipe,
   Post,
@@ -20,7 +21,13 @@ export class SongsController {
   }
 
   @Get(':id')
-  findOneById(@Param('id', new ParseIntPipe()) id: number) {
+  findOneById(
+    @Param(
+      'id',
+      new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE }),
+    )
+    id: number,
+  ) {
     return 'find one by id: ' + id;
   }
 
