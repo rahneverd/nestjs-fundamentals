@@ -13,6 +13,9 @@ Content-Type: application/json
 }
 
 ### delete a song
+GET http://localhost:3000/songs/1
+
+### delete a song
 DELETE http://localhost:3000/songs/1
 
 ### update a song

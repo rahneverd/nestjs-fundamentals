@@ -1,4 +1,13 @@
-import { Body, Controller, Delete, Get, Post, Put } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  ParseIntPipe,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { SongsService } from './songs.service';
 import { CreateSongDTO } from './dto/create-song-dto';
 
@@ -11,8 +20,8 @@ export class SongsController {
   }
 
   @Get(':id')
-  findOneById() {
-    return 'find one by id';
+  findOneById(@Param('id') id: number) {
+    return 'find one by id: ' + id;
   }
 
   @Post()
